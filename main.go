@@ -5,7 +5,6 @@ import (
 	"database/sql"
 	"encoding/json"
 	"fmt"
-	_ "github.com/lib/pq"
 	"io/ioutil"
 	"log"
 	"math/rand"
@@ -19,6 +18,8 @@ import (
 	"strings"
 	"sync"
 	"time"
+
+	_ "github.com/lib/pq"
 )
 
 var (
@@ -730,8 +731,8 @@ func main() {
 	}
 
 	// تعریف یک هندلر برای روت که درخواست‌ها را به دایرکتوری CSS ریدایرکت می‌کند
-	http.HandleFunc("/index/", func(w http.ResponseWriter, r *http.Request) {
-		r.URL.Path = strings.TrimPrefix(r.URL.Path, "/index")
+	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
+		r.URL.Path = strings.TrimPrefix(r.URL.Path, "/")
 		cssHandler.ServeHTTP(w, r)
 	})
 	http.HandleFunc("/", handleRequestAndRedirect)
