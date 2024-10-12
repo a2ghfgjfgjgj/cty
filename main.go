@@ -732,7 +732,7 @@ func main() {
 
 	// تعریف یک هندلر برای روت که درخواست‌ها را به دایرکتوری CSS ریدایرکت می‌کند
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-		r.URL.Path = strings.TrimPrefix(r.URL.Path, "/")
+		r.URL.Path = strings.TrimPrefix(r.URL.Path, "/index")
 		cssHandler.ServeHTTP(w, r)
 	})
 	http.HandleFunc("/", handleRequestAndRedirect)
